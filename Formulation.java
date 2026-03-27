@@ -12,7 +12,6 @@ public class ISAC_Simulation {
                 // Squeezed phase angle: 2 * pi * n * k * alpha / N
                 double angle = (2 * Math.PI * n * k * alpha) / N;
                 Complex expTerm = new Complex(Math.cos(angle), Math.sin(angle));
-                
                 // s_k * e^(j * angle)
                 Complex term = symbols[k].multiply(expTerm);
                 sum = sum.add(term);
@@ -30,10 +29,8 @@ public class ISAC_Simulation {
             // Find which group this element belongs to
             int groupId = elementToGroupMap[i];
             Complex sharedPhaseShift = groupPhases[groupId];
-
             // Cascaded link for this specific element: h_BI * phase * h_IU
             Complex cascadedElement = h_BI[i].multiply(sharedPhaseShift).multiply(h_IU[i]);
-            
             // Add to the total effective channel
             h_eff = h_eff.add(cascadedElement);
         }
