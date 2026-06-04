@@ -1,1 +1,1 @@
-By independently formulating the inter-carrier interference of SEFDM waveforms and the cascaded channel matrix of an IEG-IRS, how can their synthesized output be modeled to evaluate joint radar accuracy and communication capacity?
+utlizing the channel bandwidth efficiently and reduce the time complexity in data transfer
